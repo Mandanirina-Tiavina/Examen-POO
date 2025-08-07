@@ -7,8 +7,8 @@ public class Publication extends Utilisateur{
     private String auteur;
     private String description;
 
-    public Publication(String id, String nom, String email, Date date_de_creation, String id1, String auteur, String description) {
-        super(id, nom, email, date_de_creation);
+    public Publication(String id, String nom, String email, String id1, String auteur, String description) {
+        super(id, nom, email);
         this.id = id1;
         this.auteur = auteur;
         this.description = description;
