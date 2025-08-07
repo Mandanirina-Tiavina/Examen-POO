@@ -9,11 +9,10 @@ public class Utilisateur {
     private String email;
     private LocalDate date_de_creation;
 
-    public Utilisateur(String id, String nom, String email, Date date_de_creation) {
+    public Utilisateur(String id, String nom, String email) {
         this.id = id;
         this.nom = nom;
         this.email = email;
-        this.date_de_creation = LocalDate.now();
     }
 
     public String getId() {
@@ -29,6 +28,6 @@ public class Utilisateur {
     }
 
     public LocalDate getDate_de_creation() {
-        return date_de_creation;
+        return date_de_creation = LocalDate.now();
     }
 }

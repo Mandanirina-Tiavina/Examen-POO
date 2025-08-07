@@ -2,14 +2,20 @@ package groupe;
 
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Moderateur extends Utilisateur {
-    public Moderateur(String id, String nom, String email, Date date_de_creation) {
-        super(id, nom, email, date_de_creation);
+    List<Publication>publications;
+    public Moderateur(String id, String nom, String email) {
+        super(id, nom, email);
     }
 
-    public List<Publication> remove_post(int id) {
-
+    public List<Publication> removePublications(String id) {
+        publications = publications.stream()
+                .filter(e -> e.getId() == id)
+                .collect(Collectors.toList());
+        publications.remove(id);
+        return publications;
     }
 
 }
