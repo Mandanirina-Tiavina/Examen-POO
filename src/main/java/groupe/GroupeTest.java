@@ -12,7 +12,7 @@ public class GroupeTest {
         var HEI_club = new Groupe("HEI_club");
         var Manda = new Utilisateur("STD24083", "Manda", "hei.manda.16@gmail.com");
         var Tiavina = new Administrateur("Tiavina", "Tiavina", "mandatiavina@gmail.com");
-        var post = new Publication("post", )
+        var post = new Publication("post", "manda", "juste un test");
     }
 
     @Test
